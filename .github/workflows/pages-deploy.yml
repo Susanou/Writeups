@@ -70,11 +70,7 @@ jobs:
           if [[ -n $SPEC_TEST ]]; then
             # Bypass the defects of htmlproofer
             bash tools/build.sh -b "" -d "$SPEC_TEST"
-          fi          
-
-      - name: Test Site
-        run: |
-          bash tools/test.sh "$SPEC_TEST"
+          fi
 
       - name: Deploy
         run: |
