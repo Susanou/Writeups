@@ -8,34 +8,34 @@
 
 {% if page.layout == 'home' %}
 
-  <script async src="{{ '/assets/js/home.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/home.min.js' | relative_url }}" async></script>
 
 {% elsif page.layout == 'post' %}
 
-  <script async src="{{ '/assets/js/post.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/post.min.js' | relative_url }}" async></script>
 
   {% if page.math %}
     <!-- MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
   {% endif %}
 
 {% elsif page.layout == 'page' %}
 
   {% if page.type == 'categories' %}
-    <script async src="{{ '/assets/js/categories.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/categories.min.js' | relative_url }}" async></script>
   {% else %}
-    <script async src="{{ '/assets/js/page.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/page.min.js' | relative_url }}" async></script>
   {% endif %}
 
 {% else %}
 
-  <script async src="{{ '/assets/js/page.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/page.min.js' | relative_url }}" async></script>
 
 {% endif %}
 
 
+<!-- PWA -->
 {% if jekyll.environment == 'production' %}
-  <!-- PWA -->
-  <script defer src="{{ '/app.js' | relative_url }}"></script>
+  <script src="{{ '/app.js' | relative_url }}" defer></script>
 {% endif %}

@@ -57,10 +57,14 @@ layout: page
       {% endif %}
     </div>
     <div class="post-content">
+      {% if post.image %}
+      <img alt="" src="{{site.baseurl}}{{post.image}}" style="height:182px; width:300px" />
+      {% else %}
       <p>
         {% include no-linenos.html content=post.content %}
         {{ content | markdownify | strip_html | truncate: 200 }}
       </p>
+      {% endif %}
     </div>
 
     <div class="post-meta text-muted">
