@@ -8,4 +8,10 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+I'm a French student at Case Western Reserve University, Cleveland OH in Computer Science.
+I'm interested in cryptography, Capture The Flag, AI and particularly adversarial Machine Learning algorithms.
+
+I'm majoring with a depth in Networks an Security and minors in both video game design and Japanese.
+Follow this link for my up to date resume:
+[Resume](http://susanou.github.io/data/resumeCVEn.pdf)
+
