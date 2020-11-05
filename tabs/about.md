@@ -12,6 +12,9 @@ I'm a French student at Case Western Reserve University, Cleveland OH in Compute
 I'm interested in cryptography, Capture The Flag, AI and particularly adversarial Machine Learning algorithms.
 
 I'm majoring with a depth in Networks an Security and minors in both video game design and Japanese.
+I'm currently working with Dr. Ray on an experiment on AI assisants in motor learning using Unity and OpenHaptics.
+The goal is to test wether AI assistants have an effect on our performance.
+
 Follow this link for my up to date resume:
 [Resume](http://susanou.github.io/data/resumeCVEn.pdf)
 
