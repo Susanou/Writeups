@@ -1,6 +1,6 @@
 ---
 title: RSA Common Modulus
-date: 2020-11-17 00:00:00 +0200
+date: 2020-11-20 00:00:00 +0200
 categories: [root-me, Challenges, Crypto]
 tags: [crypto, RSA, modulus, Bezout]
 math: true
