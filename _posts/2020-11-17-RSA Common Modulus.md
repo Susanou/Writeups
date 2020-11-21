@@ -1,7 +1,7 @@
 ---
 title: RSA Common Modulus
 date: 2020-11-20 00:00:00 +0200
-categories: [root-me, Challenges, Crypto]
+categories: [Root Me, Challenges, Crypto]
 tags: [crypto, RSA, modulus, Bezout]
 math: true
 ---
@@ -45,6 +45,9 @@ We do need to adapt this equation a bit as normally in Bezout's Theorem we would
 $$
 Let\ y = -a
 \newline
+$$
+
+$$
 C_2^y = C_2^{-a}
 \newline
  = (C_2^{-1})^a
