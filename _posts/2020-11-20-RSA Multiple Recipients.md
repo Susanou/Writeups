@@ -1,7 +1,7 @@
 ---
 title: RSA Multiple Recipients
 date: 2020-11-17 00:00:00 +0200
-categories: [Root Me, Challenges, Crypto]
+categories: [Root Me, Crypto]
 tags: [crypto, RSA, public key, Hastad]
 math: true
 ---
