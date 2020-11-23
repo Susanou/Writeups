@@ -1,7 +1,7 @@
 ---
 title: RSA Common Modulus
 date: 2020-11-20 00:00:00 +0200
-categories: [Root Me, Crypto]
+categories: [Root Me, Cryptography]
 tags: [crypto, RSA, modulus, Bezout]
 math: true
 ---

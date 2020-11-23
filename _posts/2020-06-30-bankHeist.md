@@ -1,7 +1,7 @@
 ---
 title: Bank Heist
 date: 2020-06-30 14:50:00 +0200
-categories: [Hack The Box, Challenges, Crypto]
+categories: [Hack The Box, Challenges, Cryptography]
 tags: [crypto, atbash, cipher, phone]
 ---
 
