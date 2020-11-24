@@ -9,7 +9,7 @@
   icon: 'fab fa-github-alt'
 -
   type: htb
-  icon: 'fab fa-cube'
+  icon: 'fas fa-cube'
   url: 'https://app.hackthebox.eu/profile/337512'
 -
   type: email
