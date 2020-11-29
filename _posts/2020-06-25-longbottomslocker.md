@@ -33,3 +33,5 @@ for line in o:
     outstr += '\n'
 print outstr
 ```
+
+<asciinema-player scr="{{site.baseurl}}/assets/rec/challenges/misc/longbottom.cast" start-at="0" autoplay="1.5" speed="2.0" loop="1" theme="solarized-dark">
