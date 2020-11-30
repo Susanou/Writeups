@@ -36,10 +36,10 @@ print outstr
 
 <html>
 <head>
-
-<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/asciinema-player.css"/>
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/asciinema-player.css" />
 </head>
 <body>
-    <asciinema-player scr="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" start-at="0" autoplay="1.5" speed="2.0" loop="1" cols="150" rows="20"></asciinema-player>
-    <script src="{{site.baseurl}}/assets/js/asciinema-player.js"></script>
+  <asciinema-player src="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" autoplay="1"  speed="3" loop="1" cols="150" rows="20"></asciinema-player>
+  <script src="{{site.baseurl}}/assets/js/asciinema-player.js"></script>
 </body>
+</html>
