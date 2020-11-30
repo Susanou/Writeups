@@ -33,6 +33,9 @@ for line in o:
     outstr += '\n'
 print outstr
 ```
-
-<asciinema-player scr="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" speed="5" theme="solarized-dark" loop="loop" poster="data:text/plain,\e[5;5HAwesome \e[1;33mdemo!"></asciinema-player
-
+<html>
+    <body>
+        <asciinema-player scr="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" speed="5" theme="solarized-dark" loop="loop" poster="data:text/plain,\e[5;5HAwesome \e[1;33mdemo!"></asciinema-player>
+        <script src="{{site.baseurl}}/assets/js/asciinema-player.js"></script>
+    </body>
+</html>
