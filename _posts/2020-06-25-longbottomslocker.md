@@ -34,5 +34,5 @@ for line in o:
 print outstr
 ```
 
-<asciinema-player scr="/assets/recs/challenges/misc/longbottom.cast" speed="5" theme="solarized-dark" loop="loop" poster="data:text/plain,\e[5;5HAwesome \e[1;33mdemo!"></asciinema-player
+<asciinema-player scr="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" speed="5" theme="solarized-dark" loop="loop" poster="data:text/plain,\e[5;5HAwesome \e[1;33mdemo!"></asciinema-player
 
