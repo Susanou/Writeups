@@ -37,10 +37,9 @@ print outstr
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/asciinema-player.css"></link>
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/asciinema-player.css"/>
 </head>
 <body>
-    <asciinema-player scr="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" speed="5" theme="solarized-dark" loop="loop" poster="data:text/plain,\e[5;5HAwesome \e[1;33mdemo!"></asciinema-player>
+    <asciinema-player scr="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" start-at="0" autoplay="1.5" speed="2.0" loop="1" cols="150" rows="20"></asciinema-player>
     <script src="{{site.baseurl}}/assets/js/asciinema-player.js"></script>
 </body>
-</html>
