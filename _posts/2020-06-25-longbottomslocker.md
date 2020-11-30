@@ -39,7 +39,7 @@ print outstr
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/asciinema-player.css" />
 </head>
 <body>
-  <asciinema-player src="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" autoplay="1"  speed="3" loop="1" cols="150" rows="20"></asciinema-player>
+  <asciinema-player src="{{site.baseurl}}/assets/recs/challenges/misc/longbottom.cast" autoplay="1"  speed="3" loop="1" cols="250" rows="40"></asciinema-player>
   <script src="{{site.baseurl}}/assets/js/asciinema-player.js"></script>
 </body>
 </html>
