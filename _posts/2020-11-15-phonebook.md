@@ -1,5 +1,5 @@
 ---
-title: RSA Common Modulus
+title: Phonebook
 date: 2020-11-15 00:00:00 +0200
 categories: [Hack The Box, Challenges, Web]
 tags: [web, injection, brute force]
