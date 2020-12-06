@@ -58,7 +58,10 @@ layout: page
     </div>
     <div class="post-content">
       <p>
-        {% if page.image %}
+        {% if post.image %}
+          {%- capture img_placehodler -%}
+            data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+          {% endcapture%}
           <img src="{{ img_placehodler }}" data-src="{{ post.image }}" class="post-preview-img">
         {% else %}
           {% include no-linenos.html content=post.content %}
