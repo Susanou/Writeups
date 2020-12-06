@@ -58,8 +58,12 @@ layout: page
     </div>
     <div class="post-content">
       <p>
-        {% include no-linenos.html content=post.content %}
-        {{ content | markdownify | strip_html | truncate: 200 }}
+        {% if page.image %}
+          <img src="{{ img_placehodler }}" data-src="{{ post.image }}" class="post-preview-img">
+        {% else %}
+          {% include no-linenos.html content=post.content %}
+          {{ content | markdownify | strip_html | truncate: 200 }}
+        {% endif %}
       </p>
     </div>
 
