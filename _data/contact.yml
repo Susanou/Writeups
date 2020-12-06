@@ -8,9 +8,8 @@
   type: github
   icon: 'fab fa-github-alt'
 -
-  type: htb
-  icon: 'fas fa-cube'
-  url: 'https://app.hackthebox.eu/profile/337512'
+  type: twitter
+  icon: 'fab fa-twitter'
 -
   type: email
   icon: 'fas fa-envelope'
