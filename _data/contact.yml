@@ -10,7 +10,7 @@
 -
   type: htb
   icon: 'fas fa-cube'
-  url: ''https://app.hackthebox.eu/profile/337512''
+  url: 'https://app.hackthebox.eu/profile/337512'
 -
   type: email
   icon: 'fas fa-envelope'
