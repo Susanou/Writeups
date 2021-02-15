@@ -16,7 +16,9 @@ The first conditions for this attack to work is as follows
 
 $$
 gcd(e_1, e_2) = 1
-\newline
+$$
+
+$$
 gcd(c_2, n) = 1
 $$
 
@@ -34,24 +36,31 @@ Using this we cam derive the original message $m$:
 
 $$
 C_1^x * C_2^y = (m_{e_1})^x * (m_{e_2})^y
-\newline
+$$
+
+$$
  = m^{e_1x + e_2y}
-\newline
- = m^1 = m
+$$
+
+$$ 
+= m^1 = m
 $$
 
 We do need to adapt this equation a bit as normally in Bezout's Theorem we would get a positive and negative number pair. Let's suppose in this case that y is the negative number:
 
 $$
 Let\ y = -a
-\newline
 $$
 
 $$
 C_2^y = C_2^{-a}
-\newline
+$$
+
+$$
  = (C_2^{-1})^a
-\newline
+$$
+
+$$
  = (C_2^{-1})^{-y}
 $$
 

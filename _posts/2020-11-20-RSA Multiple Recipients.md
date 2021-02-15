@@ -14,9 +14,17 @@ Assume Bob sends the same message to multiple people using RSA with different mo
 
 $$
 P_i = (N_i, e)\ such\ that\ gcd(N_i, N_j) = 1\ \forall i\not = j
-\newline
-y_1 = x^3[N_1]\newline
-y_2 = x^3[N_2]\newline
+$$
+
+$$
+y_1 = x^3[N_1]
+$$
+
+$$
+y_2 = x^3[N_2]
+$$
+
+$$
 y_3 = x^3[N_3]
 $$
 
