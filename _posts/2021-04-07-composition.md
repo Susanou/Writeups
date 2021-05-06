@@ -1,6 +1,6 @@
 ---
 title: Composition
-date: 2021-04-7 00:00 -0500
+date: 2021-04-07 00:00 -0500
 categories: [Hack The Box, Challenges, Cryptography]
 tags: [RSA, ECC, primes, CRT]
 math: true
