@@ -5,13 +5,11 @@
 !.nojekyll
 !.travis.yml
 
-_drafts/
-_site/
-
 # bundler cache
 _site
 vendor
 Gemfile.lock
+_drafts
 
 # rubygem
 *.gem
