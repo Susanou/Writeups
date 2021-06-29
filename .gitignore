@@ -5,6 +5,9 @@
 !.nojekyll
 !.travis.yml
 
+_drafts/
+_site/
+
 # bundler cache
 _site
 vendor
