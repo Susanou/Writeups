@@ -52,7 +52,7 @@ layout: page
     <div class="post-content">
       <p>
         {% if post.image %}
-          <img src="{{post.image}}" style="height: 182px; widows: 300px">
+          <img src="{{ post.image }}" style="height: 182px; widows: 300px">
         {% else %}
 
           {% include no-linenos.html content=post.content %}
