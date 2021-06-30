@@ -15,20 +15,19 @@ timezone: Europe/Paris
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: Writeups                         # the main title
+title: Writeups                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Student by day Hacker by night   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  A website to host my solutions to different challenges, boxes etc 
+  from different websites that I like.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'http://susanou.github.io/Writeups'
 
 github:
-  username: Susanou            # change to your github username
+  username: Susanou             # change to your github username
 
 twitter:
   username: twitter_username            # change to your twitter username
@@ -40,7 +39,8 @@ social:
   email: cam.hochberg@gmail.com            # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/Susanou       # change to your github homepage
+    # - https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -66,7 +66,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode:   dark # [light|dark]
+theme_mode:   # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
@@ -76,7 +76,7 @@ theme_mode:   dark # [light|dark]
 img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
+avatar: /assets/img/sample/avatar.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true
