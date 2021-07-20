@@ -1,7 +1,7 @@
 ---
 title: Chunk Norris 
 date: 2020-08-30 14:50:00 +0200
-categories: [Google CTF, Cryptography]
+categories: [Google CTF 2020, Cryptography]
 tags: [crypto, RSA, prime generation]
 math: true
 ---
