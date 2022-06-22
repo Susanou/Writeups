@@ -4,9 +4,11 @@ icon: fas fa-info
 order: 4
 ---
 
-I’m a French student at Case Western Reserve University, Cleveland OH in Computer Science. I’m interested in cryptography, Capture The Flag, AI, and particularly adversarial Machine Learning algorithms.
+Recent French graduate in Computer Science from a US institution with a passion for game development.
 
-I’m majoring with a depth in Networks and Security and minors in both video game design and Japanese. Currently working on my Mater project developing an algorithm for federated learning that could mitigate GAN attacks.
+I have created multiple games using the Unity Engine. Also created the framework for 3D experiences in Unity and converted them to a 2D environment using Paper JS.
+
+I'm passionate about games, AI and security and specialize in cryptography for CTF hacking competitions.
 
 Follow this link for my up to date resume:
-[Resume](http://susanou.github.io/data/resumeCVEn.pdf)
+[Resume](http://susanou.github.io/data/CV_EN_GameDev.pdf)
