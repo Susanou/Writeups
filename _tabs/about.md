@@ -12,3 +12,6 @@ I'm passionate about games, AI and security and specialize in cryptography for C
 
 Follow this link for my up to date resume:
 [Resume](http://susanou.github.io/data/CV_EN_CameronHochberg.pdf)
+
+Follow this link for my master thesis:
+[Thesis](http://susanou.github.io/data/MS_Thesis.pdf)
