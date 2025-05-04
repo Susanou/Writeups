@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en-US" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.4.1" /><meta property="og:title" content="Story" /><meta property="og:locale" content="en_US" /><meta name="description" content="Source code" /><meta property="og:description" content="Source code" /><link rel="canonical" href="http://susanou.github.io/Writeups/posts/story/" /><meta property="og:url" content="http://susanou.github.io/Writeups/posts/story/" /><meta property="og:site_name" content="Writeups" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-07-18T00:00:00+02:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Story" /><meta name="twitter:site" content="@twitter_username" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-07-18T00:00:00+02:00","datePublished":"2021-07-18T00:00:00+02:00","description":"Source code","headline":"Story","mainEntityOfPage":{"@type":"WebPage","@id":"http://susanou.github.io/Writeups/posts/story/"},"url":"http://susanou.github.io/Writeups/posts/story/"}</script><title>Story | Writeups</title><link rel="apple-touch-icon" sizes="180x180" href="/Writeups/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/Writeups/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/Writeups/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/Writeups/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/Writeups/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Writeups"><meta name="application-name" content="Writeups"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/Writeups/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/Writeups/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script> <script defer src="/Writeups/assets/js/dist/post.min.js"></script> <script> /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */ MathJax = { tex: { inlineMath: [ /* start/end delimiter pairs for in-line math */ ['$','$'], ['\\(','\\)'] ], displayMath: [ /* start/end delimiter pairs for display math */ ['$$', '$$'], ['\\[', '\\]'] ] } }; </script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> <script defer src="/Writeups/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/Writeups/" alt="avatar" class="mx-auto"> <img src="/Writeups/assets/img/sample/avatar.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/Writeups/">Writeups</a></div><div class="site-subtitle font-italic">Student by day Hacker by night</div></div><ul class="w-100"><li class="nav-item"> <a href="/Writeups/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/Writeups/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/Writeups/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/Writeups/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/Writeups/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/Susanou" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://app.hackthebox.eu/profile/337512" aria-label="htb" target="_blank" rel="noopener"> <i class="fas fa-cube"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['cam.hochberg','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/Writeups/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a> <a href="https://www.linkedin.com/in/cam-hochberg/" aria-label="linkedin" target="_blank" rel="noopener"> <i class="fab fa-linkedin"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/Writeups/"> Posts </a> </span> <span>Story</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Story</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> Cameron Hochberg </span> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Sun, Jul 18, 2021, 12:00 AM +0200" prep="on" > Jul 18, 2021 <i class="unloaded">2021-07-18T00:00:00+02:00</i> </span></div><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1037 words">5 min</span></div></div><div class="post-content"><h1 id="source-code">Source code</h1><div class="language-dart highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+</pre><td class="rouge-code"><pre><span class="ss">#</span><span class="o">!/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">dart</span>
+
+<span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
+<span class="kn">import</span> <span class="s">'dart:io'</span><span class="o">;</span>
+
+<span class="c1">// NOTE: calculate and randomize functions are private (i.e., you don't have access).</span>
+<span class="kn">import</span> <span class="s">'package:ctf_story/private.dart'</span> <span class="kd">show</span> <span class="n">calculate</span><span class="p">,</span> <span class="n">randomize</span><span class="o">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">List</span><span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">final</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s">'flag.txt'</span><span class="p">)</span><span class="o">.</span><span class="na">readAsStringSync</span><span class="p">();</span>
+  <span class="n">print</span><span class="p">(</span><span class="s">'Hello! Please tell me a fairy tale!'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="n">line</span> <span class="o">=</span> <span class="n">stdin</span><span class="o">.</span><span class="na">readLineSync</span><span class="p">(</span><span class="nl">encoding:</span> <span class="n">utf8</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">utf8</span><span class="o">.</span><span class="na">encode</span><span class="p">(</span><span class="n">line</span><span class="p">)</span><span class="o">.</span><span class="na">where</span><span class="p">((</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="mi">32</span> <span class="o">||</span> <span class="n">i</span> <span class="p">&gt;</span><span class="o">=</span> <span class="mi">128</span><span class="p">)</span><span class="o">.</span><span class="na">isNotEmpty</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">'There are unprintable characters in your story.'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kd">final</span> <span class="n">firstText</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">toLowerCase</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="n">crcValues</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">utf8</span><span class="o">.</span><span class="na">encode</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
+  <span class="n">print</span><span class="p">(</span><span class="s">'The CRC values of your text are </span><span class="si">$crcValues</span><span class="s">.'</span><span class="p">);</span>
+  <span class="kt">List</span><span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;</span> <span class="n">expectedValues</span><span class="p">;</span>
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="n">expectedValues</span> <span class="o">=</span> <span class="n">randomize</span><span class="p">(</span><span class="n">utf8</span><span class="o">.</span><span class="na">encode</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">expectedValues</span> <span class="o">==</span> <span class="n">crcValues</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">expectedValues</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">'Your story is too short. Bye!'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">print</span><span class="p">(</span><span class="s">'But I am looking for a story of </span><span class="si">$expectedValues</span><span class="s">.'</span><span class="p">);</span>
+  <span class="n">line</span> <span class="o">=</span> <span class="n">stdin</span><span class="o">.</span><span class="na">readLineSync</span><span class="p">(</span><span class="nl">encoding:</span> <span class="n">utf8</span><span class="p">);</span>
+  <span class="kd">final</span> <span class="n">secondText</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">toLowerCase</span><span class="p">();</span>
+  <span class="n">crcValues</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">utf8</span><span class="o">.</span><span class="na">encode</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">firstText</span> <span class="o">!=</span> <span class="n">secondText</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">'Perhaps you would like to start from scratch? Bye!'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="kt">List</span><span class="o">.</span><span class="na">generate</span><span class="p">(</span>
+              <span class="n">expectedValues</span><span class="o">.</span><span class="na">length</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">crcValues</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">expectedValues</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+          <span class="o">.</span><span class="na">indexOf</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="p">&lt;</span>
+      <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">'What a lovely story! Your flag is </span><span class="si">${flag}</span><span class="s">'</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">print</span><span class="p">(</span><span class="s">'Bye!'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></table></code></div></div><h1 id="solution">Solution</h1><h2 id="input">Input</h2><p>The first problem we encoutered was that both the <code class="language-plaintext highlighter-rouge">calculate</code> and <code class="language-plaintext highlighter-rouge">randomize</code> functions are made private so we have no idea what kind of input they are looking for nor what they return and how they return it. After some trial and error we realized that for the input to progress we need to send a string of 256-bytes minimum to see what story the program was looking for.</p><h2 id="reading-the-source-code">Reading the source code</h2><p>While reading the source code, we see the following line:</p><div class="language-dart highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>  <span class="kd">var</span> <span class="n">crcValues</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">utf8</span><span class="o">.</span><span class="na">encode</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
+  <span class="n">print</span><span class="p">(</span><span class="s">'The CRC values of your text are </span><span class="si">$crcValues</span><span class="s">.'</span><span class="p">);</span>
+</pre></table></code></div></div><p>From that we can assume that the <code class="language-plaintext highlighter-rouge">calculate</code> function calculates CRC values for the input string although we aren’t sure how. One thing to know about CRC is that it is a <a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">homomorphic function under XOR</a>. This means that:</p>\[crc(x \oplus y) = crc(x) \oplus crc(y)\]<p>With that knowledge, even though we can’t reverse the calculate function to find exactly what the target string would be, we can instead transform this into a lattice problem.</p><h2 id="the-lattice-problem">The Lattice Problem</h2><p>Taking inspiration from one of LiveOverflow’s <a href="https://www.youtube.com/watch?v=EOlddNofKxo">videos</a>, we found our inspiration and transformed the problem into a lattice problem. A Lattice is a subgroup of a certain problem space generated by a basis of said space. I won’t go over the math required but if you need more check the <a href="https://cryptohack.gitbook.io/cryptobook/lattices/definitions">cryptobook gitbook</a> page on lattices (great read for anything crypto).</p><p>Here the space we are working with is the <code class="language-plaintext highlighter-rouge">CRC values</code> and their <code class="language-plaintext highlighter-rouge">corresponding offsets</code>. Same as in the video, we will be working under <code class="language-plaintext highlighter-rouge">GF(2)</code>. Working from a base string (it can be anything as long as you keep it constant within your code), we can generate new random strings, get their CRC according to the server and XOR it with the base’s CRC to get the CRC of the both strings XORed using the previous proprety of CRC.</p><p>Once we have enough vectors to form a basis of the problem space (in this case 94 vectors), we can build the matrix of all these vectors that will allow us to solve linear equations of the form:</p>\[A \overrightarrow{x} = B\]<p>where <code class="language-plaintext highlighter-rouge">x</code> is the vector that represents all the offsets needed to XOR to the base in order to get to the target <code class="language-plaintext highlighter-rouge">B</code> vector and <code class="language-plaintext highlighter-rouge">A</code> is our matrix representing the basis of the problem space. In this case, if <code class="language-plaintext highlighter-rouge">x_i</code> (the ith coordinate of <code class="language-plaintext highlighter-rouge">x</code>) is <code class="language-plaintext highlighter-rouge">1</code> we XOR the corresponding offset to the base otherwise we do nothing.</p><p>Now the last issue is <code class="language-plaintext highlighter-rouge">What is the "goal" we want to get to with this lattice?</code> Originaly we thought that we just needed to pass the target CRC values and solve this set of linear eqution. Going back a step, we realized that this wouldn’t work and instead we needed to target the <code class="language-plaintext highlighter-rouge">difference</code> between the base and the target.</p><h1 id="solve-code">Solve code</h1><p>Putting everything together, we threw everything into SAGEMATH so that it would solve the linear equation. To make our testing phase easier, we also pickled the basis once we created it so we wouldn’t have to create it at each iteration of our testing phase.</p><div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+</pre><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">pickle</span>
+
+<span class="kn">from</span> <span class="n">string</span> <span class="kn">import</span> <span class="n">ascii_lowercase</span>
+<span class="kn">from</span> <span class="n">bitarray</span> <span class="kn">import</span> <span class="n">bitarray</span>
+<span class="kn">from</span> <span class="n">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="n">F</span> <span class="o">=</span> <span class="nc">GF</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">BASE</span> <span class="o">=</span> <span class="sh">''</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">ascii_lowercase</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">256</span><span class="p">)]).</span><span class="nf">encode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">BASE</span><span class="p">)</span>
+
+<span class="c1"># context.log_level = 'debug'
+</span>
+<span class="k">def</span> <span class="nf">get_crc</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="nf">remote</span><span class="p">(</span><span class="sh">'</span><span class="s">story.2021.ctfcompetition.com</span><span class="sh">'</span><span class="p">,</span> <span class="mi">1337</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">!</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">reply</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sh">'</span><span class="s">.</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">''</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="nb">bytes</span><span class="p">.</span><span class="nf">fromhex</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">))</span>
+                     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">reply</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">[</span><span class="sh">'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">]</span><span class="sh">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">,</span><span class="sh">'</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">vals</span>
+
+<span class="k">def</span> <span class="nf">get_goal</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="nf">remote</span><span class="p">(</span><span class="sh">'</span><span class="s">story.2021.ctfcompetition.com</span><span class="sh">'</span><span class="p">,</span> <span class="mi">1337</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">!</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">.</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">reply</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sh">'</span><span class="s">.</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">''</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="nb">bytes</span><span class="p">.</span><span class="nf">fromhex</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">))</span>
+                     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">reply</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">[</span><span class="sh">'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">]</span><span class="sh">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">,</span><span class="sh">'</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">vals</span><span class="p">,</span> <span class="n">conn</span>
+
+<span class="n">offsets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">crcs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">isfile</span><span class="p">(</span><span class="sh">'</span><span class="s">basis.p</span><span class="sh">'</span><span class="p">):</span>
+    <span class="k">while</span> <span class="nf">len</span><span class="p">(</span><span class="n">offsets</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">112</span><span class="p">:</span>
+        <span class="n">base_crc</span> <span class="o">=</span> <span class="nf">get_crc</span><span class="p">(</span><span class="n">BASE</span><span class="p">)</span>
+        <span class="n">random_offset</span> <span class="o">=</span> <span class="nf">bytes</span><span class="p">([</span><span class="nf">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mh">0x20</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">256</span><span class="p">)])</span>
+        <span class="n">random_crc</span> <span class="o">=</span> <span class="nf">xor</span><span class="p">(</span><span class="nf">get_crc</span><span class="p">(</span><span class="nf">xor</span><span class="p">(</span><span class="n">BASE</span><span class="p">,</span> <span class="n">random_offset</span><span class="p">)),</span> <span class="n">base_crc</span><span class="p">)</span>
+
+        <span class="n">random_crc_array</span> <span class="o">=</span> <span class="nf">bitarray</span><span class="p">()</span>
+        <span class="n">random_crc_array</span><span class="p">.</span><span class="nf">frombytes</span><span class="p">(</span><span class="n">random_crc</span><span class="p">)</span>
+        <span class="n">random_crc_vec</span> <span class="o">=</span> <span class="n">random_crc_array</span><span class="p">.</span><span class="nf">tolist</span><span class="p">()</span>
+        <span class="nf">print</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">random_crc_vec</span><span class="p">))</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nf">matrix</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">crcs</span> <span class="o">+</span> <span class="p">[</span><span class="n">random_crc_vec</span><span class="p">]).</span><span class="nf">transpose</span><span class="p">()</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="nf">rank</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">m</span><span class="p">.</span><span class="nf">rank</span><span class="p">()</span> <span class="o">&gt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">crcs</span><span class="p">):</span>
+            <span class="n">offsets</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">random_offset</span><span class="p">)</span>
+            <span class="n">crcs</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">random_crc_vec</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">basis.p</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">wb</span><span class="sh">'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="p">.</span><span class="nf">dump</span><span class="p">((</span><span class="n">offsets</span><span class="p">,</span> <span class="n">crcs</span><span class="p">),</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">basis.p</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">rb</span><span class="sh">'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">offsets</span><span class="p">,</span> <span class="n">crcs</span> <span class="o">=</span> <span class="n">pickle</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="c1"># Start to solve here.
+</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nf">matrix</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">crcs</span><span class="p">).</span><span class="nf">transpose</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="nf">nrows</span><span class="p">(),</span> <span class="n">m</span><span class="p">.</span><span class="nf">ncols</span><span class="p">())</span>
+<span class="n">goal</span><span class="p">,</span> <span class="n">conn</span> <span class="o">=</span> <span class="nf">get_goal</span><span class="p">(</span><span class="n">BASE</span><span class="p">)</span>
+
+<span class="n">base_crc_array</span> <span class="o">=</span> <span class="nf">bitarray</span><span class="p">()</span>
+<span class="n">base_crc_array</span><span class="p">.</span><span class="nf">frombytes</span><span class="p">(</span><span class="nf">get_crc</span><span class="p">(</span><span class="n">BASE</span><span class="p">))</span>
+<span class="n">base_crc_vec</span> <span class="o">=</span> <span class="nf">vector</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">base_crc_array</span><span class="p">.</span><span class="nf">tolist</span><span class="p">())</span>
+
+<span class="n">target_crc_array</span> <span class="o">=</span> <span class="nf">bitarray</span><span class="p">()</span>
+<span class="n">target_crc_array</span><span class="p">.</span><span class="nf">frombytes</span><span class="p">(</span><span class="n">goal</span><span class="p">)</span>
+<span class="n">target_crc_vec</span> <span class="o">=</span> <span class="nf">vector</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">target_crc_array</span><span class="p">.</span><span class="nf">tolist</span><span class="p">())</span>
+
+<span class="n">diff</span> <span class="o">=</span> <span class="n">target_crc_vec</span> <span class="o">-</span> <span class="n">base_crc_vec</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
+<span class="n">solved</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="nf">solve_right</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+
+<span class="n">target</span> <span class="o">=</span> <span class="n">BASE</span>
+
+<span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nf">zip</span><span class="p">(</span><span class="n">solved</span><span class="p">,</span> <span class="n">offsets</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">t</span><span class="p">:</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="nf">xor</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="n">conn</span><span class="p">.</span><span class="nf">sendline</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="nf">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="se">\n</span><span class="sh">'</span><span class="p">))</span>
+</pre></table></code></div></div><p><strong>FLAG:</strong> <code class="language-plaintext highlighter-rouge">CTF{eb64749d08bd99b681f2bc75aa65eab35a80310f7426f6872ba869d244e37135}</code></p><h1 id="references">References:</h1><ol><li>https://www.youtube.com/watch?v=EOlddNofKxo<li>https://en.wikipedia.org/wiki/Cyclic_redundancy_check<li>https://cryptohack.gitbook.io/cryptobook/</ol></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/Writeups/categories/google-ctf-2021/'>Google CTF 2021</a>, <a href='/Writeups/categories/cryptography/'>Cryptography</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/Writeups/tags/crypto/" class="post-tag no-text-decoration" >crypto</a> <a href="/Writeups/tags/crc/" class="post-tag no-text-decoration" >CRC</a> <a href="/Writeups/tags/lattice/" class="post-tag no-text-decoration" >Lattice</a> <a href="/Writeups/tags/homomorphism/" class="post-tag no-text-decoration" >Homomorphism</a> <a href="/Writeups/tags/linear-algebra/" class="post-tag no-text-decoration" >Linear Algebra</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Story - Writeups&url=http://susanou.github.io/Writeups/posts/story/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Story - Writeups&u=http://susanou.github.io/Writeups/posts/story/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Story - Writeups&url=http://susanou.github.io/Writeups/posts/story/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/Writeups/posts/cycling/">Cycling</a><li><a href="/Writeups/posts/mlsteal/">MLSteal</a><li><a href="/Writeups/posts/pythia/">Pythia</a><li><a href="/Writeups/posts/ChunkNoris/">Chunk Norris</a><li><a href="/Writeups/posts/Admirer/">Admirer</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/Writeups/tags/crypto/">crypto</a> <a class="post-tag" href="/Writeups/tags/rsa/">RSA</a> <a class="post-tag" href="/Writeups/tags/easy/">easy</a> <a class="post-tag" href="/Writeups/tags/web/">web</a> <a class="post-tag" href="/Writeups/tags/aes/">AES</a> <a class="post-tag" href="/Writeups/tags/linux/">linux</a> <a class="post-tag" href="/Writeups/tags/misc/">misc</a> <a class="post-tag" href="/Writeups/tags/mitm/">MITM</a> <a class="post-tag" href="/Writeups/tags/sqli/">SQLi</a> <a class="post-tag" href="/Writeups/tags/crt/">CRT</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/Writeups/posts/pythia/"><div class="card-body"> <span class="timeago small" > Jul 18, 2021 <i class="unloaded">2021-07-18T00:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Pythia</h3><div class="text-muted small"><p> Source Code #!/usr/bin/python -u import random import string import time from base64 import b64encode, b64decode from cryptography.hazmat.backends import default_backend from cryptography.hazmat....</p></div></div></a></div><div class="card"> <a href="/Writeups/posts/LINECTF/"><div class="card-body"> <span class="timeago small" > Mar 20, 2021 <i class="unloaded">2021-03-20T23:00:00+01:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>LINE CTF</h3><div class="text-muted small"><p> babycrypto1 Source code #!/usr/bin/env python from base64 import b64decode from base64 import b64encode import socket import multiprocessing from Crypto.Cipher import AES from Crypto.Random impo...</p></div></div></a></div><div class="card"> <a href="/Writeups/posts/signup/"><div class="card-body"> <span class="timeago small" > Jul 25, 2021 <i class="unloaded">2021-07-25T01:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Signup</h3><div class="text-muted small"><p></p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/Writeups/posts/pythia/" class="btn btn-outline-primary" prompt="Older"><p>Pythia</p></a> <a href="/Writeups/posts/signup/" class="btn btn-outline-primary" prompt="Newer"><p>Signup</p></a></div><div id="disqus" class="pt-2 pb-2"><p class="text-center text-muted small pb-5"> Comments powered by <a href="https://disqus.com/">Disqus</a>.</p></div><script src="/Writeups/assets/js/lib/jquery.disqusloader.min.js"></script> <script> const options = { scriptUrl: '//writeups-fukurou.disqus.com/embed.js', disqusConfig: function() { this.page.title = 'Story'; this.page.url = 'http://susanou.github.io/Writeups/posts/story/'; this.page.identifier = '/posts/story/'; } }; $.disqusLoader('#disqus', options); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2025 <a href="https://github.com/Susanou">Cameron Hochberg</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Susanou" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/Writeups/tags/crypto/">crypto</a> <a class="post-tag" href="/Writeups/tags/rsa/">RSA</a> <a class="post-tag" href="/Writeups/tags/easy/">easy</a> <a class="post-tag" href="/Writeups/tags/web/">web</a> <a class="post-tag" href="/Writeups/tags/aes/">AES</a> <a class="post-tag" href="/Writeups/tags/linux/">linux</a> <a class="post-tag" href="/Writeups/tags/misc/">misc</a> <a class="post-tag" href="/Writeups/tags/mitm/">MITM</a> <a class="post-tag" href="/Writeups/tags/sqli/">SQLi</a> <a class="post-tag" href="/Writeups/tags/crt/">CRT</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/Writeups/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="http://susanou.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>

